@@ -1,20 +1,19 @@
+import React from "react";
+import { useFetchEpisodes } from "../hooks/useEpisodes"; // Asegúrate de ajustar la ruta correcta
 
-import { useState, useEffect } from "react"
+export default function Episodes() {
+  const { episodes, loading, error } = useFetchEpisodes();
 
-import { useEpisodesHook } from "../hooks/useEpisodesHook"
-
-export default function Episodes(){
-
-    const [ episodes, setEpisodes ] = useState(null)
-
-    setEpisodes()
-    return(
-
-        <main className="main">
-
-           <h1>All episodes.</h1>
-
-
-        </main>
-    )
+  return (
+    <main className="main">
+      <h1>All episodes.</h1>
+      {loading && <p>Loading...</p>}
+      {error && <p>Error: {error.message}</p>}
+      {episodes && (
+        <div>
+          {/* Renderiza el contenido de los episodios aquí */}
+        </div>
+      )}
+    </main>
+  );
 }

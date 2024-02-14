@@ -11,10 +11,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   
   <Router>
     <Routes>
-    <Route path="/" element={<Layout />}>
-          <Route index  element={<Home/> } />
-          <Route path='episodios'  element={<Episodes/> } />
-        </Route>
+      <Route path="/" element={<Layout />}>
+            <Route index  element={<Home/> } />
+            <Route path='episodios'  element={<Episodes/> } />
+      </Route>  
     </Routes>
   </Router>
 )
