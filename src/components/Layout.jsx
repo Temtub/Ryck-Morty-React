@@ -17,7 +17,7 @@ export default function Layout(){
                         <Link to="/episodios">Episodios</Link>
                     </li>
                     <li>
-                        <Link>Actor</Link>
+                        <Link to="/actores">Actor</Link>
                     </li>
                 </ol>
             </nav>
