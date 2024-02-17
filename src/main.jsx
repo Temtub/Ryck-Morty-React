@@ -7,6 +7,7 @@ import Layout from './components/Layout';
 import Home from './components/Home';
 import Episodes from './components/Episodes';
 import Actores from './components/Actores';
+import EpisodesActors from './components/EpisodesActors';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -16,7 +17,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Routes>
       <Route path="/" element={<Layout />}>
             <Route index  element={<Home/> } />
-            <Route path='episodios'  element={<Episodes/> } />
+            <Route path='episodios'  element={<Episodes/> } >
+              <Route path=':idParam' element={<EpisodesActors/>} />
+            </Route>
+            
             <Route path='actores'  element={<Actores/> } />
       </Route>  
     </Routes>

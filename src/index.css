@@ -107,3 +107,28 @@ body{
   background-color: #242424;
 }
 
+.episodes__main{
+  
+}
+.episodes__body{
+  display: flex;
+  flex-direction: row;  
+}
+.episodes__episodesCont{
+  display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Define columnas automáticas */
+    grid-gap: 20px; /* Espacio entre las cartas */
+    width: 45%;
+}
+.episode {
+  border: 1px solid #f9f9f9;
+  color: #f9f9f9;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.356);
+}
